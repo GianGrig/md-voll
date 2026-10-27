@@ -1,10 +1,10 @@
 package md.voll.api.domain.paciente;
 
-import md.voll.api.domain.endereco.Endereso;
+import md.voll.api.domain.endereco.Endereco;
 
 public record DadosDetalhadosPaciente(String nome, String email, String cpf, String telefone,
-                                      Endereso endereso) {
+                                      Endereco endereco) {
     public DadosDetalhadosPaciente(Paciente paciente) {
-        this(paciente.getNome(), paciente.getEmail(), paciente.getTelefone(), paciente.getCpf(), paciente.getEndereco());
+        this(paciente.getNome(), paciente.getEmail(), paciente.getCpf(), paciente.getTelefone(), paciente.getEndereco());
     }
 }

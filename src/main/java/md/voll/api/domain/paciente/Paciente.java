@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import md.voll.api.domain.endereco.Endereso;
+import md.voll.api.domain.endereco.Endereco;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
@@ -24,7 +24,7 @@ public class Paciente {
     private String telefone;
 
     @Embedded
-    private Endereso endereco;
+    private Endereco endereco;
 
     private boolean ativo;
 
@@ -33,7 +33,7 @@ public class Paciente {
         this.email = dados.email();
         this.cpf = dados.cpf();
         this.telefone = dados.telefone();
-        this.endereco = new Endereso(dados.endereco());
+        this.endereco = new Endereco(dados.endereco());
         this.ativo = true;
     }
 
